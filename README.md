@@ -4,9 +4,10 @@
 1. [Overview](#overview)
 2. [Exact Exchange](#exact-exchange)
 3. [Range-Separated Hybrid DFT Functionals](#range-separated-hybrid-dft-functionals)
+   - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
    - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
-4. [References](#references) (not there, yet)
+5. [References](#references) (not there, yet)
 
 ---
 
@@ -41,28 +42,13 @@ $$ E_{\text{X}}^{\text{hDFT}} = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E
 
 For example, in PBE0, we have $\alpha=0.25$ and DFA=PBE.
 
-### Three-parameter range-Separated Hybrid DFT Functionals
-
 Combining the ideas of both RS and hDFT, we arrive at the RS-hDFT formalism, where $E_{\text{X}}$ is defined as
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
 The parameter $\alpha$ defines the fraction of fixed exact exchange contribution.
 
-#### CAM-B3LYP, Gaussian 16 C.01
-```
- IExCor=20419 DFT=T Ex+Corr=CAM-B3LYP ExCW=0 ScaHFX=  1.000000
- ScaDFX=  1.000000  1.000000  1.000000  0.810000 ScalE2=  1.000000  1.000000
- IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
- HFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
- DFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
-```
-
-- $\omega$ = wLong = 0.33
-- $\alpha$ = cFull = 0.19
-- $\beta$ = cLong = 0.46
-
-- Orca 6.0.0 uses the same settings
+### Two-parameter range-Separated Hybrid DFT Functionals
 
 #### LC-BLYP, Gaussian 16 C.01
 ```
@@ -93,6 +79,23 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
 - $\beta$ = cLong = 1.0
   
 - This is not the same as LC-PBE in Orca 6.0.0
+
+### Three-parameter range-Separated Hybrid DFT Functionals
+
+#### CAM-B3LYP, Gaussian 16 C.01
+```
+ IExCor=20419 DFT=T Ex+Corr=CAM-B3LYP ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  0.810000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ HFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
+ DFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
+```
+
+- $\omega$ = wLong = 0.33
+- $\alpha$ = cFull = 0.19
+- $\beta$ = cLong = 0.46
+
+- Orca 6.0.0 uses the same settings
 
 ### Four-parameter range-Separated Hybrid DFT Functionals
 

@@ -1,4 +1,4 @@
-# def2XC: Definitions of Exchange-Correlation Functionals
+# def2-XCP: Definitions of Exchange-Correlation Functionals, Please!
 
 ## Table of Contents
 1. [Overview](#overview)

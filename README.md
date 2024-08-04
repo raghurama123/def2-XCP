@@ -33,7 +33,6 @@ For example, in PBE0, we have $\alpha=0.25$ and DFA=PBE.
 
 Combining the ideas of both RS and hDFT, we arrive at the RS-hDFT formalism, where $E_{\text{X}}$ is defined as
 
-
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
 # CAM-B3LYP, Gaussian 16 C.01
@@ -45,9 +44,9 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
  DFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
 ```
 
+- $\omega$ = wLong = 0.33
 - $\alpha$ = cFull = 0.19
 - $\beta$ = cLong = 0.46
-- $\omega$ = wLong = 0.33
 
 # LC-BLYP, Gaussian 16 C.01
 ```
@@ -58,9 +57,9 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
  DFx  wShort=  0.000000 wLong=  0.470000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
-- $\alpha$ = cFull = 0.0
-- $\beta$ = cLong = 1.0
 - $\omega$ = wLong = 0.47
+- $\alpha$ = cFull = 0.0
+- $\beta$ = along = 1.0
   
 # LC-wPBE, Gaussian 16 C.01
 ```
@@ -71,9 +70,11 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
+- $\omega$ = wLong = 0.4
 - $\alpha$ = cFull = 0.0
 - $\beta$ = cLong = 1.0
-- $\omega$ = wLong = 0.4
+
+$$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + \alpha_2 E_{\text{X}}^{\text{DFA}} + \beta_1 E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta_2 E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
 # LC-wHPBE, Gaussian 16 C.01
 ```
@@ -84,9 +85,11 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
 ```
 
-- $\alpha$ = cFull = 0.0 ?
-- $\beta$ = cLong = 1.0 ?
 - $\omega$ = wLong = 0.4
+- $\alpha_1$ = cFull (HFx) = 0.0
+- $\alpha_2$ = cFull (DFx) = 0.0 
+- $\beta_1$ = cLong (HFx) = 1.0
+- $\beta_2$ = cLong (DFx) = 0.0
   
 # wB97X-D, Gaussian 16 C.01
 ```
@@ -97,6 +100,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
  DFx  wShort=  0.000000 wLong=  0.200000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
-- $\alpha$ = cFull = 0.22
-- $\beta$ = cLong = 0.778
-- $\omega$ = wLong = 0.20
+- $\alpha_1$ = cFull (HFx) = 0.22
+- $\alpha_2$ = cFull (DFx) = 0.0 
+- $\beta_1$ = cLong (HFx) = 0.78
+- $\beta_2$ = cLong (DFx) = 1.0

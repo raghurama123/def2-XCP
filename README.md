@@ -85,7 +85,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E
 ```
 wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
 ```
-- wPBEh is exchange part of HSE with screening constant ω = 0.15 according to [this blog](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html)[^1]
+- wPBEh is exchange part of HSE with screening constant ω = 0.15 according to [this blog](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html)[^3]
   
 - This is not the same as LC-PBE in Orca 6.0.0
 
@@ -143,7 +143,9 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 
 ## References
 
-[^1]: Blog, Laboratory of Organic Materials of the Institute of Solid State Physics, University of Latvia. (Accessed Aug 2024). [https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html).
-[^2]: NWChem Manual. (Accessed Aug 2024). [https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html)
-[^3]: Orca 6.0.0 Manual.
+[^1]: Gaussian 16 C.01 Manual. (Accessed Aug 2024). [https://gaussian.com/dft/](https://gaussian.com/dft/)
+[^2]: Guide to Overlay 3 for Gaussian 16. (Accessed Aug 2024). [https://gaussian.com/overlay3/](https://gaussian.com/overlay3/)
+[^3]: Blog, Laboratory of Organic Materials of the Institute of Solid State Physics, University of Latvia. (Accessed Aug 2024). [https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html).
+[^4]: NWChem Manual. (Accessed Aug 2024). [https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html)
+[^5]: Orca 6.0.0 Manual.
 

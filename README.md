@@ -26,7 +26,7 @@ $$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} $$
 
 The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF. We can define the exact exchange energy term as given in [this page on wikipedia](https://en.wikipedia.org/wiki/Hybrid_functional)
 
-$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
+$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i^*(r_1)\phi_j^(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j^*(r_2)$$
 
 ## Generalized Gradient Approximations
 

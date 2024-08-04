@@ -100,6 +100,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
  DFx  wShort=  0.000000 wLong=  0.200000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
+- $\omega$ = wLong = 0.2
 - $\alpha_1$ = cFull (HFx) = 0.22
 - $\alpha_2$ = cFull (DFx) = 0.0 
 - $\beta_1$ = cLong (HFx) = 0.78

@@ -50,6 +50,10 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
 
 ### Two-parameter range-Separated Hybrid DFT Functionals
 
+These RS-hDFT XC functionals do not have a fixed amount of global exact exchange term, so $\alpha=0$.
+
+$$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
+
 #### LC-BLYP, Gaussian 16 C.01
 ```
  IExCor=10402 DFT=T Ex=LC-B+HF Corr=LYP ExCW=0 ScaHFX=  1.000000
@@ -59,9 +63,8 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
  DFx  wShort=  0.000000 wLong=  0.470000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
-- $\omega$ = wLong = 0.47
-- $\alpha$ = cFull = 0.0
-- $\beta$ = along = 1.0
+- $\omega$ = wLong = 0.47 
+- $\beta$ = along = 1.0 
 
 - Orca 6.0.0 uses  $\omega$ 0.33 (see page 458 of manual)
   
@@ -74,9 +77,8 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
 
-- $\omega$ = wLong = 0.4
-- $\alpha$ = cFull = 0.0
-- $\beta$ = cLong = 1.0
+- $\omega$ = wLong = 0.4 
+- $\beta$ = cLong = 1.0 
   
 - This is not the same as LC-PBE in Orca 6.0.0
 

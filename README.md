@@ -1,5 +1,15 @@
 # def2XC: Definitions of Exchange-Correlation Functionals
 
+## Table of Contents
+1. [Overview](#overview)
+2. [Exact Exchange](#exact-exchange)
+3. [Range-Separated Hybrid DFT Functionals](#range-separated-hybrid-dft-functionals)
+   - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
+   - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
+4. [References](#references) (not there, yet)
+
+---
+
 Definitions of various exchange-correlation (XC) functionals used in density functional theory (DFT) are collected here.
 
 ## Overview
@@ -8,14 +18,14 @@ In DFT, the exchange-correlation functional $E_{\text{XC}}$ plays a crucial role
 
 $$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} $$
 
-### Exact Exchange
+## Exact Exchange
 
 The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF.
 
 $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = \frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
 
 
-### Range-Separated Hybrid DFT Functionals
+## Range-Separated Hybrid DFT Functionals
 
 The exact exchange term can be partitioned (i.e., range-separated) into short-range and long-range parts
 
@@ -31,13 +41,15 @@ $$ E_{\text{X}}^{\text{hDFT}} = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E
 
 For example, in PBE0, we have $\alpha=0.25$ and DFA=PBE.
 
+### Three-parameter range-Separated Hybrid DFT Functionals
+
 Combining the ideas of both RS and hDFT, we arrive at the RS-hDFT formalism, where $E_{\text{X}}$ is defined as
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
 The parameter $\alpha$ defines the fraction of fixed exact exchange contribution.
 
-# CAM-B3LYP, Gaussian 16 C.01
+#### CAM-B3LYP, Gaussian 16 C.01
 ```
  IExCor=20419 DFT=T Ex+Corr=CAM-B3LYP ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  0.810000 ScalE2=  1.000000  1.000000
@@ -52,7 +64,7 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
 
 - Orca 6.0.0 uses the same settings
 
-# LC-BLYP, Gaussian 16 C.01
+#### LC-BLYP, Gaussian 16 C.01
 ```
  IExCor=10402 DFT=T Ex=LC-B+HF Corr=LYP ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -67,7 +79,7 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
 
 - Orca 6.0.0 uses  $\omega$ 0.33 (see page 458 of manual)
   
-# LC-wPBE, Gaussian 16 C.01
+#### LC-wPBE, Gaussian 16 C.01
 ```
  IExCor=32609 DFT=T Ex+Corr=LC-wPBE ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  0.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -82,9 +94,11 @@ The parameter $\alpha$ defines the fraction of fixed exact exchange contribution
   
 - This is not the same as LC-PBE in Orca 6.0.0
 
+### Four-parameter range-Separated Hybrid DFT Functionals
+
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + \alpha_2 E_{\text{X}}^{\text{DFA}} + \beta_1 E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta_2 E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
-# LC-wHPBE, Gaussian 16 C.01
+#### LC-wHPBE, Gaussian 16 C.01
 ```
  IExCor=33909 DFT=T Ex+Corr=LC-wHPBE ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -99,7 +113,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 - $\beta_1$ = cLong (HFx) = 1.0
 - $\beta_2$ = cLong (DFx) = 0.0
   
-# wB97X-D, Gaussian 16 C.01
+#### wB97X-D, Gaussian 16 C.01
 ```
  IExCor= 4639 DFT=T Ex+Corr=wB97XD ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000

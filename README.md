@@ -53,6 +53,18 @@ $$
 - $P_2$ is printed in the output file as `ScaHFX`.
 - `ScaDFX` has four values in the order $P_4$, $P_3$, $P_6$, and $P_5$.
 
+### `B3LYP`, Gaussian 16 C.01 (aka B3LYP-G)
+```
+ IExCor=  402 DFT=T Ex+Corr=B3LYP ExCW=0 ScaHFX=  0.200000
+ ScaDFX=  0.800000  0.720000  1.000000  0.810000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+```
+
+-  $E_{\text{X}}^{\text{local}} =  E_{\text{X}}^{\text{LSDA}}$
+-  $E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}$
+-  $E_{\text{C}}^{\text{local}} =  E_{\text{C}}^{\text{LSDA}}$
+-  $E_{\text{C}}^{\text{non-local}} =  E_{\text{C}}^{\text{LYP}}$
+
 ### `PBE1PBE`, Gaussian 16 C.01 (aka PBE0)
 
 ```
@@ -60,7 +72,6 @@ $$
  ScaDFX=  0.750000  0.750000  1.000000  1.000000 ScalE2=  1.000000  1.000000
  IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
 ```
-
 
 ## Range-Separated Hybrid DFT Functionals
 

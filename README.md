@@ -44,9 +44,12 @@ $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \
 
 ## Hybrid DFT Functionals
 
+<a id="eq4"> </a>
+
 $$
  E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 \Delta E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 \Delta E_{\text{C}}^{\text{non-local}} \tag{4}
 $$
+
 
 - In Gaussian 16 C01, $E_{\text{X}}^{\text{local}}$ is the Slater-exchange functional,  $E_{\text{X}}^{\text{S}}$, keyword is `S`
 - $P_1$ is usually set to either 1.0 or 0.0. $P_1=0.0$ implies $E_{\text{X}}^{\text{DFA}}=0$. Let's assume that we'll always have $P_1=1.0$.
@@ -59,7 +62,7 @@ $$
  ScaDFX=  0.800000  0.720000  1.000000  0.810000 ScalE2=  1.000000  1.000000
  IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
 ```
-Various terms entering Eq.(4) are
+Various terms entering [Eq. (4)](#eq4) are
 
 -  $E_{\text{X}}^{\text{local}} =  E_{\text{X}}^{\text{LSDA}}$
 -  $E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}$

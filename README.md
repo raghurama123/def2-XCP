@@ -45,7 +45,7 @@ $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \
 ## Hybrid DFT Functionals
 
 $$
- E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 E_{\text{C}}^{\text{non-local}}
+ E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 \Delta E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 \Delta E_{\text{C}}^{\text{non-local}}
 $$
 
 - In Gaussian 16 C01, $E_{\text{X}}^{\text{local}}$ is the Slater-exchange functional,  $E_{\text{X}}^{\text{S}}$, keyword is `S`
@@ -64,6 +64,17 @@ $$
 -  $E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}$
 -  $E_{\text{C}}^{\text{local}} =  E_{\text{C}}^{\text{LSDA}}$
 -  $E_{\text{C}}^{\text{non-local}} =  E_{\text{C}}^{\text{LYP}}$
+
+$$
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{non-local}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
+$$
+
+- Note that it looks like Gaussian uses $P_6=1$. In many places, for example in [this wiki page](https://en.wikipedia.org/wiki/Hybrid_functional#B3LYP), we find that $P_6=1-P_5$ resulting in
+
+$$
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{non-local}} +  0.19 E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
+$$
+
 
 ### `PBE1PBE`, Gaussian 16 C.01 (aka PBE0)
 

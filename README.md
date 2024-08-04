@@ -19,6 +19,7 @@ In DFT, the exchange-correlation functional $E_{\text{XC}}$ plays a crucial role
 
 $$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} $$
 
+
 ## Exact Exchange
 
 The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF.
@@ -139,6 +140,9 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 - $\beta_1$ = cLong (HFx) = 0.777964
 - $\beta_2$ = cLong (DFx) = 1.0
 
+
 ## References
+
 [^1]: Blog, Laboratory of Organic Materials of the Institute of Solid State Physics, University of Latvia. (Accessed Aug 2024). [https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html).
 
+---

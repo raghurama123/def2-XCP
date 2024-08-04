@@ -3,8 +3,8 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Exact Exchange](#exact-exchange)
-3. [Generaglized Gradient Approximations](#gga)
-4. [Hybrid DFT Functionals]
+3. [Generalized Gradient Approximations](#gga)
+4. [Hybrid DFT Functionals](#hDFT)
 5. [Range-Separated Hybrid DFT Functionals](#range-separated-hybrid-dft-functionals)
    - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
@@ -28,7 +28,7 @@ The Hartree--Fock (HF) model completely captures the exchange interaction; hence
 
 $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = \frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
 
-## Generaglized Gradient Approximations
+## Generalized Gradient Approximations
 
 ### PBEPBE (aka PBE)
 

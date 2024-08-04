@@ -64,7 +64,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E
 ```
 
 - $\omega$ = wLong = 0.47 
-- $\beta$ = along = 1.0 
+- $\beta$ = cLong = 1.0 
 
 - Orca 6.0.0 uses  $\omega$ 0.33 (see page 458 of manual)
   
@@ -94,7 +94,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E
 ```
 
 - $\omega$ = wLong = 0.33
-- $\alpha$ = cFull = 0.19
+- $\alpha$ = cFull + cShort = 0.19
 - $\beta$ = cLong = 0.46
 
 - Orca 6.0.0 uses the same settings
@@ -113,8 +113,8 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 ```
 
 - $\omega$ = wLong = 0.4
-- $\alpha_1$ = cFull (HFx) = 0.0
-- $\alpha_2$ = cFull (DFx) = 0.0 
+- $\alpha_1$ = cFull + cShort (HFx) = 0.0
+- $\alpha_2$ = cFull + cShort (DFx) = 1.0 
 - $\beta_1$ = cLong (HFx) = 1.0
 - $\beta_2$ = cLong (DFx) = 0.0
   
@@ -128,7 +128,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 ```
 
 - $\omega$ = wLong = 0.2
-- $\alpha_1$ = cFull (HFx) = 0.22
-- $\alpha_2$ = cFull (DFx) = 0.0 
-- $\beta_1$ = cLong (HFx) = 0.78
+- $\alpha_1$ = cFull + cShort (HFx) = 0.222036
+- $\alpha_2$ = cFull + cShort (DFx) = 0.0 
+- $\beta_1$ = cLong (HFx) = 0.777964
 - $\beta_2$ = cLong (DFx) = 1.0

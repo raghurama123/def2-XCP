@@ -144,4 +144,6 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 ## References
 
 [^1]: Blog, Laboratory of Organic Materials of the Institute of Solid State Physics, University of Latvia. (Accessed Aug 2024). [https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html).
+[^2]: NWChem Manual. (Accessed Aug 2024). [https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html](https://nwchemgit.github.io/Density-Functional-Theory-for-Molecules.html)
+[^3]: Orca 6.0.0 Manual.
 

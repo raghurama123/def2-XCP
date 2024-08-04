@@ -73,6 +73,8 @@ $$
  E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{non-local}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
 $$
 
+- With IOp control (see [https://gaussian.com/dft/](https://gaussian.com/dft/)), one can _construct_ using `BLYP/basis  IOp(3/76=1000002000) IOp(3/77=0720008000) IOp(3/78=0810010000)`
+
 - Note that it looks like Gaussian uses $P_6=1$. In many places, for example in [this wiki page](https://en.wikipedia.org/wiki/Hybrid_functional#B3LYP), we find that $P_6=1-P_5$ resulting in
 
 $$

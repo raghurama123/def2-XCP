@@ -35,6 +35,8 @@ Combining the ideas of both RS and hDFT, we arrive at the RS-hDFT formalism, whe
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
+The parameter $\alpha$ defines the fraction of fixed exact exchange contribution.
+
 # CAM-B3LYP, Gaussian 16 C.01
 ```
  IExCor=20419 DFT=T Ex+Corr=CAM-B3LYP ExCW=0 ScaHFX=  1.000000
@@ -48,6 +50,8 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
 - $\alpha$ = cFull = 0.19
 - $\beta$ = cLong = 0.46
 
+- Orca 6.0.0 uses the same settings
+
 # LC-BLYP, Gaussian 16 C.01
 ```
  IExCor=10402 DFT=T Ex=LC-B+HF Corr=LYP ExCW=0 ScaHFX=  1.000000
@@ -60,6 +64,8 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
 - $\omega$ = wLong = 0.47
 - $\alpha$ = cFull = 0.0
 - $\beta$ = along = 1.0
+
+- Orca 6.0.0 uses  $\omega$ 0.33 (see page 458 of manual)
   
 # LC-wPBE, Gaussian 16 C.01
 ```
@@ -73,6 +79,8 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
 - $\omega$ = wLong = 0.4
 - $\alpha$ = cFull = 0.0
 - $\beta$ = cLong = 1.0
+  
+- This is not the same as LC-PBE in Orca 6.0.0
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + \alpha_2 E_{\text{X}}^{\text{DFA}} + \beta_1 E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta_2 E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 

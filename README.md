@@ -24,13 +24,13 @@ $$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} $$
 
 ## Exact Exchange
 
-The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF.
+The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF. We can define the exact exchange energy term as given in [this page on wikipedia](https://en.wikipedia.org/wiki/Hybrid_functional)
 
-$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = \frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
+$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
 
 ## Generalized Gradient Approximations
 
-### PBEPBE (aka PBE)
+### `PBEPBE`, Gaussian 16 C.01 (aka PBE)
 
 ```
  IExCor= 1009 DFT=T Ex=PBE Corr=PBE ExCW=0 ScaHFX=  0.000000
@@ -41,12 +41,15 @@ $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = \frac{1}{2} \sum_i \s
 ## Hybrid DFT Functionals
 
 $$
- E_{\text{X}}^{\text{hDFT}} = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}}  
+ E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 E_{\text{C}}^{\text{non-local}}
 $$
 
-- $\alpha$ is printed in the output file as `ScaHFX`
+- In Gaussian 16 C01, $E_{\text{X}}^{\text{local}}$ is the Slater-exchange functional,  $E_{\text{X}}^{\text{S}}$, keyword is `S`
+- $P_1$ is usually set to either 1.0 or 0.0. $P_1=0.0$ implies $E_{\text{X}}^{\text{DFA}}=0$. Let's assume that we'll always have $P_1=1.0$.
+- $P_2$ is printed in the output file as `ScaHFX`.
+- `ScaDFX` has four values in the order $P_4$, $P_3$, $P_6$, and $P_5$.
 
-### PBE1PBE (aka PBE0)
+### `PBE1PBE`, Gaussian 16 C.01 (aka PBE0)
 
 ```
  IExCor= 1009 DFT=T Ex+Corr=PBE1PBE ExCW=0 ScaHFX=  0.250000
@@ -83,7 +86,7 @@ These RS-hDFT XC functionals do not have a fixed amount of global exact exchange
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
-#### LC-BLYP, Gaussian 16 C.01
+#### `LC-BLYP`, Gaussian 16 C.01
 ```
  IExCor=10402 DFT=T Ex=LC-B+HF Corr=LYP ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -97,7 +100,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E
 
 - Orca 6.0.0 uses  $\omega$ 0.33 (see page 458 of manual)
   
-#### LC-wPBE, Gaussian 16 C.01
+#### `LC-wPBE`, Gaussian 16 C.01
 ```
  IExCor=32609 DFT=T Ex+Corr=LC-wPBE ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  0.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -119,7 +122,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
 
 ### Three-parameter range-Separated Hybrid DFT Functionals
 
-#### CAM-B3LYP, Gaussian 16 C.01
+#### `CAM-B3LYP`, Gaussian 16 C.01
 ```
  IExCor=20419 DFT=T Ex+Corr=CAM-B3LYP ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  0.810000 ScalE2=  1.000000  1.000000
@@ -138,7 +141,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + \alpha_2 E_{\text{X}}^{\text{DFA}} + \beta_1 E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta_2 E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 
-#### LC-wHPBE, Gaussian 16 C.01
+#### `LC-wHPBE`, Gaussian 16 C.01
 ```
  IExCor=33909 DFT=T Ex+Corr=LC-wHPBE ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
@@ -153,7 +156,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 - $\beta_1$ = cLong (HFx) = 1.0
 - $\beta_2$ = cLong (DFx) = 0.0
   
-#### wB97X-D, Gaussian 16 C.01
+#### `wB97X-D`, Gaussian 16 C.01
 ```
  IExCor= 4639 DFT=T Ex+Corr=wB97XD ExCW=0 ScaHFX=  1.000000
  ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000

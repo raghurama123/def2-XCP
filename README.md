@@ -83,7 +83,10 @@ $$
 $$
 
 - There are plenty of discussions about this. See [https://www.ccl.net/cgi-bin/ccl/message-new?1997+02+01+003](https://www.ccl.net/cgi-bin/ccl/message-new?1997+02+01+003), [https://www.ccl.net/cgi-bin/ccl/message-new?2013+01+02+001](https://www.ccl.net/cgi-bin/ccl/message-new?2013+01+02+001)
-- Here is a [nice comparison of B3LYP definitions across software](https://chemistry.stackexchange.com/questions/39411/definition-of-the-b3lyp-functional-in-common-qc-programs). Apparently, Gaussian and Orca use $P_6=1.0$, while many other software use $P_6=0.19$.
+
+- In the IOp manual[^2], one encounters `Becke3 coefficients: aLSD + (1-a)HF + b(dBx) + VWN + c(LYP-VWN), with a=0.8 b=0.72 c=0.81 `
+
+- Here is a [nice comparison of B3LYP definitions across software](https://chemistry.stackexchange.com/questions/39411/definition-of-the-b3lyp-functional-in-common-qc-programs). Apparently, Gaussian and Orca use $P_6=1.0$, while many other software use $P_6=0.19$. So, the non-local correlation term in Gaussian and Orca should imply BLYP-VWN.
 
 ### `PBE1PBE`, Gaussian 16 C.01 (aka PBE0)
 

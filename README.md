@@ -3,11 +3,13 @@
 ## Table of Contents
 1. [Overview](#overview)
 2. [Exact Exchange](#exact-exchange)
-3. [Range-Separated Hybrid DFT Functionals](#range-separated-hybrid-dft-functionals)
+3. [Generaglized Gradient Approximations](#gga)
+4. [Hybrid DFT Functionals]
+5. [Range-Separated Hybrid DFT Functionals](#range-separated-hybrid-dft-functionals)
    - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
    - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
-5. [References](#references) 
+6. [References](#references) 
 
 ---
 
@@ -25,6 +27,32 @@ $$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} $$
 The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF.
 
 $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = \frac{1}{2} \sum_i \sum_j \int \int \phi_i(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j(r_2)$$
+
+## Generaglized Gradient Approximations
+
+### PBEPBE (aka PBE)
+
+```
+ IExCor= 1009 DFT=T Ex=PBE Corr=PBE ExCW=0 ScaHFX=  0.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+```
+
+## Hybrid DFT Functionals
+
+$$
+ E_{\text{X}}^{\text{hDFT}} = \alpha E_{\text{X}}^{\text{HF}} + (1 - \alpha) E_{\text{X}}^{\text{DFA}}  
+$$
+
+- $\alpha$ is printed in the output file as `ScaHFX`
+
+### PBE1PBE (aka PBE0)
+
+```
+ IExCor= 1009 DFT=T Ex+Corr=PBE1PBE ExCW=0 ScaHFX=  0.250000
+ ScaDFX=  0.750000  0.750000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+```
 
 
 ## Range-Separated Hybrid DFT Functionals

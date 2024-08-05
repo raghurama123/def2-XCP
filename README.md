@@ -130,7 +130,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha E_{\text{X}}^{\text{HF}} + (1
 
 The parameter $\alpha$ defines the fraction of fixed exact exchange contribution.
 
-### Two-parameter range-Separated Hybrid DFT Functionals
+### Two-parameter range-separated Hybrid DFT Functionals
 
 These RS-hDFT XC functionals do not have a fixed amount of global exact exchange term, so $\alpha=0$.
 
@@ -164,7 +164,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) =  E_{\text{X}}^{\text{DFA}} + \beta E
 
 - Can be called using IOp using
 ```
-wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
+wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
 ```
 
 ```
@@ -174,12 +174,13 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
  HFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
+- ` IOp(3/78=1000010000)` seems to be the default
 - wPBEh is exchange part of HSE with screening constant ω = 0.15 according to [this blog](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html)[^3]
 
 - Another possibility of using IOp is
   
 ```
-/basisset IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
+/basisset IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
 ```
 
 ```
@@ -192,7 +193,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
 
 - Yet another possibility of using IOp is
 ```
-/6-31G IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1)
+/6-31G IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1)
 ```
 
 ```
@@ -210,7 +211,7 @@ $$
 
 - This is not the same as LC-PBE in Orca 6.0.0
 
-### Three-parameter range-Separated Hybrid DFT Functionals
+### Three-parameter range-separated Hybrid DFT Functionals
 
 #### `CAM-B3LYP`, Gaussian 16 C.01
 ```
@@ -227,7 +228,7 @@ $$
 
 - Orca 6.0.0 uses the same settings
 
-### Four-parameter range-Separated Hybrid DFT Functionals
+### Four-parameter range-separated Hybrid DFT Functionals
 
 $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + \alpha_2 E_{\text{X}}^{\text{DFA}} + \beta_1 E_{\text{X}}^{\text{LR-HF}} (\omega) - \beta_2 E_{\text{X}}^{\text{LR-DFA}} (\omega)  $$
 

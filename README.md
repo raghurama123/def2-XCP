@@ -243,6 +243,23 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 - $\alpha_2$ = cFull + cShort (DFx) = 1.0 
 - $\beta_1$ = cLong (HFx) = 1.0
 - $\beta_2$ = cLong (DFx) = 0.0
+
+- Another possibility of using IOp is
+```
+/basiset IOp(3/74=33909) IOp(3/76=1000010000) IOp(3/77=1000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1)
+```
+
+```
+ IExCor=33909 DFT=T Ex=LC-HSEH+HF Corr=PBE ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ HFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
+ DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
+```
+- According to the last definition, we have
+$$
+E_{\text{X}}^{\text{LC-}\omega\text{HPBE}} (\omega=0.4) =  E_{\text{X}}^{\text{DFA (PBE)}} + E_{\text{X}}^{\text{LR-HF}} (\omega=0.4) -  E_{\text{X}}^{\text{LR-DFA (PBE)}} (\omega = 0.4)
+$$
   
 #### `wB97X-D`, Gaussian 16 C.01
 ```

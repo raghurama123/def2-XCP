@@ -65,28 +65,27 @@ $$
 Various terms entering [Eq. (4)](#eq4) are
 
 -  $E_{\text{X}}^{\text{local}} =  E_{\text{X}}^{\text{LSDA}}$
--  $E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}$
+-  $\Delta E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}- E_{\text{X}}^{\text{LSDA}}$
 -  $E_{\text{C}}^{\text{local}} =  E_{\text{C}}^{\text{LSDA}}$
--  $E_{\text{C}}^{\text{non-local}} =  E_{\text{C}}^{\text{LYP}}$
+-  $\Delta E_{\text{C}}^{\text{non-local}} =  E_{\text{C}}^{\text{LYP}}-E_{\text{C}}^{\text{LSDA}}$
 
 $$
- E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{non-local}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{B}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{LYP}}
+$$
+
+By expaning the $Delta$-terms, we get
+$$
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 [ E_{\text{X}}^{\text{B}} - E_{\text{X}}^{\text{LSDA}}]+  E_{\text{C}}^{\text{LSDA}} + 0.81 [ E_{\text{C}}^{\text{LYP}} - E_{\text{C}}^{\text{LSDA}} ]
+$$
+
+which finally results in 
+$$
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.08 E_{\text{X}}^{\text{LSDA}} + 0.72 E_{\text{X}}^{\text{B}} +  0.19 E_{\text{C}}^{\text{LSDA}} + 0.81 E_{\text{C}}^{\text{LYP}}
 $$
 
 - With IOp control[^1][^2], one can _construct_ using `BLYP/basis  IOp(3/76=1000002000) IOp(3/77=0720008000) IOp(3/78=0810010000)`
-- The result is different when using `BLYP/basis  IOp(3/76=1000002000) IOp(3/77=0720008000) IOp(3/78=0810001900)`
 
-- Note that it looks like Gaussian uses $P_6=1$. In many places, for example in [this wiki page](https://en.wikipedia.org/wiki/Hybrid_functional#B3LYP), we find that $P_6=1-P_5$ resulting in
-
-$$
- E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{non-local}} +  0.19 E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
-$$
-
-- There are plenty of discussions about this. See [https://www.ccl.net/cgi-bin/ccl/message-new?1997+02+01+003](https://www.ccl.net/cgi-bin/ccl/message-new?1997+02+01+003), [https://www.ccl.net/cgi-bin/ccl/message-new?2013+01+02+001](https://www.ccl.net/cgi-bin/ccl/message-new?2013+01+02+001)
-
-- In the IOp manual[^2], one encounters `Becke3 coefficients: aLSD + (1-a)HF + b(dBx) + VWN + c(LYP-VWN), with a=0.8 b=0.72 c=0.81 `
-
-- Here is a [nice comparison of B3LYP definitions across software](https://chemistry.stackexchange.com/questions/39411/definition-of-the-b3lyp-functional-in-common-qc-programs). Apparently, Gaussian and Orca use $P_6=1.0$, while many other software use $P_6=0.19$. So, the non-local correlation term in Gaussian and Orca should imply BLYP-VWN.
+- Here is a [nice comparison of B3LYP definitions across software](https://chemistry.stackexchange.com/questions/39411/definition-of-the-b3lyp-functional-in-common-qc-programs).
 
 ### `PBE1PBE`, Gaussian 16 C.01 (aka PBE0)
 
@@ -95,6 +94,17 @@ $$
  ScaDFX=  0.750000  0.750000  1.000000  1.000000 ScalE2=  1.000000  1.000000
  IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
 ```
+
+Various terms entering [Eq. (4)](#eq4) are
+
+-  $E_{\text{X}}^{\text{local}} =  E_{\text{X}}^{\text{LSDA}}$
+-  $E_{\text{X}}^{\text{non-local}} =  E_{\text{X}}^{\text{B}}$
+-  $E_{\text{C}}^{\text{local}} =  E_{\text{C}}^{\text{LSDA}}$
+-  $E_{\text{C}}^{\text{non-local}} =  E_{\text{C}}^{\text{LYP}}$
+
+$$
+ E_{\text{XC}}^{\text{B3LYP}} = 0.25 E_{\text{X}}^{\text{HF}} + 0.75 E_{\text{X}}^{\text{LSDA}} + 0.75 \Delta E_{\text{X}}^{\text{non-local}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{non-local}}
+$$
 
 ## Range-Separated Hybrid DFT Functionals
 

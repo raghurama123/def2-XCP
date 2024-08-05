@@ -266,6 +266,19 @@ E_{\text{X}}^{\text{LC-}\omega\text{HPBE}} (\omega=0.4) =  E_{\text{X}}^{\text{D
 $$
 
 - If we set `HSEH1PBE` it automatically sets $\omega=0.11$ for the short-range part.
+
+- Another sleek way of using IOp (without invoking `LC-` or using a prefix `3` in IOp(3/74) is
+```
+/basisset IOp(3/74=3909) IOp(3/76=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1) 
+```
+which returns
+```
+ IExCor= 3909 DFT=T Ex=HSEH+HF Corr=PBE ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ HFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
+ DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
+```
   
 #### `wB97X-D`, Gaussian 16 C.01
 ```

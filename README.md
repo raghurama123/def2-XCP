@@ -203,6 +203,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
 ```
 - According to the last definition, we have
+
 $$
 E_{\text{X}}^{\text{LC-}\omega\text{PBE}} (\omega=0.4) =  E_{\text{X}}^{\text{DFA (Slater)}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega=0.4) - \beta E_{\text{X}}^{\text{LR-DFA (Slater)}} (\omega = 0.4)
 $$
@@ -259,9 +260,12 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
 ```
 - According to the last definition, we have
+
 $$
 E_{\text{X}}^{\text{LC-}\omega\text{HPBE}} (\omega=0.4) =  E_{\text{X}}^{\text{DFA (PBE)}} + E_{\text{X}}^{\text{LR-HF}} (\omega=0.4) -  E_{\text{X}}^{\text{LR-DFA (PBE)}} (\omega = 0.4)
 $$
+
+- If we set `HSEH1PBE` it automatically sets $\omega=0.11$ for the short-range part.
   
 #### `wB97X-D`, Gaussian 16 C.01
 ```

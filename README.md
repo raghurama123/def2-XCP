@@ -188,6 +188,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
  HFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
 ```
+
 - Yet another possibility of using IOp is
 ```
 /6-31G IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1)
@@ -201,7 +202,9 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
  DFx  wShort=  0.000000 wLong=  0.400000 cFull=  0.000000 cShort=  1.000000 cLong=  0.000000
 ```
 - According to the last definition, we have
-$$ E_{\text{X}}^{\text{LC-wPBE}} (\omega=0.4) =  E_{\text{X}}^{\text{DFA (Slater)}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega=0.4) - \beta E_{\text{X}}^{\text{LR-DFA (Slater)}} (\omega = 0.4)  $$
+$$
+E_{\text{X}}^{\text{LC-}\omega\text{PBE}} (\omega=0.4) =  E_{\text{X}}^{\text{DFA (Slater)}} + \beta E_{\text{X}}^{\text{LR-HF}} (\omega=0.4) - \beta E_{\text{X}}^{\text{LR-DFA (Slater)}} (\omega = 0.4)
+$$
 
 - This is not the same as LC-PBE in Orca 6.0.0
 

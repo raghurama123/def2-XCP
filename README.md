@@ -177,6 +177,7 @@ wPBEhPBE/basisset   IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=100001000
 - wPBEh is exchange part of HSE with screening constant ω = 0.15 according to [this blog](https://cfilomquantum.blogspot.com/2016/06/density-functionals-in-gaussian-09-rev.html)[^3]
 
 - Another possibility of using IOp is
+  
 ```
 /basisset IOp(3/74=32609) IOp(3/76=1000010000) IOp(3/77=0000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
 ```
@@ -245,6 +246,7 @@ $$ E_{\text{X}}^{\text{RS-hDFT}} (\omega) = \alpha_1 E_{\text{X}}^{\text{HF}} + 
 - $\beta_2$ = cLong (DFx) = 0.0
 
 - Another possibility of using IOp is
+  
 ```
 /basiset IOp(3/74=33909) IOp(3/76=1000010000) IOp(3/77=1000010000) IOp(3/78=1000010000) IOp(3/107=0400000000) IOp(3/108=0400000000) IOp(3/119=1000000000) IOp(3/120=0000010000) IOp(3/130=-1) IOp(3/131=-1)
 ```

@@ -73,12 +73,14 @@ $$
  E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 \Delta E_{\text{X}}^{\text{B}} +  E_{\text{C}}^{\text{LSDA}} + 0.81 \Delta E_{\text{C}}^{\text{LYP}}
 $$
 
-By expaning the $Delta$-terms, we get
+By expanding the $\Delta$-terms, we get
+
 $$
- E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 [ E_{\text{X}}^{\text{B}} - E_{\text{X}}^{\text{LSDA}}]+  E_{\text{C}}^{\text{LSDA}} + 0.81 [ E_{\text{C}}^{\text{LYP}} - E_{\text{C}}^{\text{LSDA}} ]
+ E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.8 E_{\text{X}}^{\text{LSDA}} + 0.72 [ E_{\text{X}}^{\text{B}} - E_{\text{X}}^{\text{LSDA}}] +  E_{\text{C}}^{\text{LSDA}} + 0.81 [ E_{\text{C}}^{\text{LYP}} - E_{\text{C}}^{\text{LSDA}} ]
 $$
 
-which finally results in 
+which finally results in
+
 $$
  E_{\text{XC}}^{\text{B3LYP}} = 0.2 E_{\text{X}}^{\text{HF}} + 0.08 E_{\text{X}}^{\text{LSDA}} + 0.72 E_{\text{X}}^{\text{B}} +  0.19 E_{\text{C}}^{\text{LSDA}} + 0.81 E_{\text{C}}^{\text{LYP}}
 $$

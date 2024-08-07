@@ -297,7 +297,7 @@ which returns
 - $\beta_1$ = cLong (HFx) = 0.777964
 - $\beta_2$ = cLong (DFx) = 1.0
 
-## B3LYP, LC-BLYP, CAM-B3LYP
+## BLYP based functionals
 
 ### B3LYP
 ```

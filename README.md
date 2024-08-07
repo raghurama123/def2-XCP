@@ -9,7 +9,8 @@
    - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
    - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
-6. [References](#references) 
+6. [B3LYP, LC-BLYP, CAM-B3LYP](#blyp-based-functionals)
+7. [References](#references) 
 
 ---
 
@@ -296,6 +297,44 @@ which returns
 - $\beta_1$ = cLong (HFx) = 0.777964
 - $\beta_2$ = cLong (DFx) = 1.0
 
+## B3LYP, LC-BLYP, CAM-B3LYP
+
+- B3LYP
+```
+#P BLYP/basisset IOp(3/76=1000002000) IOp(3/77=0720008000) IOp(3/78=0810010000) SCF(maxcycles=100)  Int(Grid=ultrafine)
+```
+
+```
+ IExCor=  402 DFT=T Ex=B+HF Corr=LYP ExCW=0 ScaHFX=  0.200000
+ ScaDFX=  0.800000  0.720000  1.000000  0.810000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+```
+
+- LC-BLYP
+```
+BLYP/basisset IOp(3/76=1000010000) IOp(3/77=1000010000) IOp(3/78=1000010000) IOp(3/107=0470000000,3/108=0470000000) IOp(3/119=1000000000) IOp(3/120=1000000000) IOp(3/130=-1) IOp(3/131=-1)
+```
+
+```
+ IExCor=  402 DFT=T Ex=B+HF Corr=LYP ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  1.000000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ HFx  wShort=  0.000000 wLong=  0.470000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
+ DFx  wShort=  0.000000 wLong=  0.470000 cFull=  0.000000 cShort=  0.000000 cLong=  1.000000
+```
+
+-CAM-B3LYP
+```
+/basisset IOp(3/74=419) IOp(3/76=1000010000) IOp(3/77=1000010000) IOp(3/78=0810010000) IOp(3/107=0330000000,3/108=0330000000) IOp(3/119=0460000000) IOp(3/120=0460000000) IOp(3/130=01900) IOp(3/131=01900)
+```
+
+```
+ IExCor=  419 DFT=T Ex=B+HF Corr=V5LYP ExCW=0 ScaHFX=  1.000000
+ ScaDFX=  1.000000  1.000000  1.000000  0.810000 ScalE2=  1.000000  1.000000
+ IRadAn=      5 IRanWt=     -1 IRanGd=            0 ICorTp=0 IEmpDi=  4
+ HFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
+ DFx  wShort=  0.000000 wLong=  0.330000 cFull=  0.190000 cShort=  0.000000 cLong=  0.460000
+```
 
 ## References
 

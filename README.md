@@ -9,7 +9,7 @@
    - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
    - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
-6. [BLYP based functionals](#blyp-based-functionals)
+6. [BLYP based functionals defined through IOp](#blyp-based-functionals)
 7. [References](#references) 
 
 ---
@@ -297,7 +297,7 @@ which returns
 - $\beta_1$ = cLong (HFx) = 0.777964
 - $\beta_2$ = cLong (DFx) = 1.0
 
-## BLYP based functionals
+## BLYP based functionals defined through IOp
 
 ### B3LYP
 ```

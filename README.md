@@ -9,7 +9,7 @@
    - [Two-parameter range-Separated Hybrid DFT Functionals](#two-parameter-range-separated-hybrid-dft-functionals)
    - [Three-parameter range-Separated Hybrid DFT Functionals](#three-parameter-range-separated-hybrid-dft-functionals)
    - [Four-parameter range-Separated Hybrid DFT Functionals](#four-parameter-range-separated-hybrid-dft-functionals)
-6. [B3LYP, LC-BLYP, CAM-B3LYP](#blyp-based-functionals)
+6. [BLYP based functionals](#blyp-based-functionals)
 7. [References](#references) 
 
 ---

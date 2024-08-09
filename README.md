@@ -20,18 +20,18 @@ Definitions of various exchange-correlation (XC) functionals used in density fun
 
 In DFT, the exchange-correlation functional $E_{\text{XC}}$ plays a crucial role in determining the total energy of a system. It is typically divided into exchange $E_{\text{X}}$ and correlation $E_{\text{C}}$ components.
 
-$$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}} \tag{1} $$
+$$ E_{\text{XC}} = E_{\text{X}} + E_{\text{C}}  $$
 
 
 ## Exact Exchange
 
 The Hartree--Fock (HF) model completely captures the exchange interaction; hence, the exact exchange implies the exchange term calculated with HF. We can define the exact exchange energy term as given in [this page on wikipedia](https://en.wikipedia.org/wiki/Hybrid_functional)
 
-$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i^{\*}(r_1) \phi_j^{\*}(r_2) \frac{1}{r_{12}} \phi_j(r_1) \phi_i(r_2) \tag{2} $$
+$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i^{\*}(r_1) \phi_j^{\*}(r_2) \frac{1}{r_{12}} \phi_j(r_1) \phi_i(r_2) $$
 
 or equivalently as
 
-$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i^{\*}(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j^{\*}(r_2) \tag{3} $$
+$$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \sum_j \int \int \phi_i^{\*}(r_1)\phi_j(r_1)\frac{1}{r_{12}} \phi_i(r_2)\phi_j^{\*}(r_2) $$
 
 ## Generalized Gradient Approximations
 
@@ -48,7 +48,7 @@ $$E_{\text{X}}^{\text{exact}} = E_{\text{X}}^{\text{HF}} = -\frac{1}{2} \sum_i \
 <a id="eq4"> </a>
 
 $$
- E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 \Delta E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 \Delta E_{\text{C}}^{\text{non-local}} \tag{4}
+ E_{\text{XC}}^{\text{hDFT}} = P_2 E_{\text{X}}^{\text{HF}} + P_1[ P_4 E_{\text{X}}^{\text{local}} + P_3 \Delta E_{\text{X}}^{\text{non-local}} ] + P_6 E_{\text{C}}^{\text{local}} + P_5 \Delta E_{\text{C}}^{\text{non-local}} 
 $$
 
 

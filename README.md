@@ -16,6 +16,8 @@
 
 Definitions of various exchange-correlation (XC) functionals used in density functional theory (DFT) are collected here.
 
+⚠️ This page is under construction. There are likely mistakes.  
+
 ## Overview
 
 In DFT, the exchange-correlation functional $E_{\text{XC}}$ plays a crucial role in determining the total energy of a system. It is typically divided into exchange $E_{\text{X}}$ and correlation $E_{\text{C}}$ components.

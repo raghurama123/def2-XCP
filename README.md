@@ -14,7 +14,7 @@
 
 ---
 
-Definitions of various exchange-correlation (XC) functionals used in density functional theory (DFT) are collected here.
+Definitions of various exchange-correlation (XC) functionals used in density functional theory (DFT) are collected here. The original purpose of this page was to introduce the various components of XC functionals through calculations.  
 
 ⚠️ This page is under construction. There are likely mistakes.  
 
